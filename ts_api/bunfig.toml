@@ -1,0 +1,10 @@
+[build]
+target = "node"
+minify = false
+sourcemap = "external"
+
+[test]
+preload = "./setup.ts"
+
+[loaders]
+".json" = "json"

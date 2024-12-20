@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/schemas/serverCapabilities.schema.json",
+  "type": "object",
+  "properties": {
+    "experimental": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "supportedProtocolVersions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "prompts": {
+      "type": "object",
+      "required": ["listChanged"],
+      "properties": {
+        "listChanged": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "resources": {
+      "type": "object",
+      "properties": {
+        "subscribe": { "type": "boolean" },
+        "listChanged": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "tools": {
+      "type": "object",
+      "properties": {
+        "listChanged": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "logging": {
+      "type": "object",
+      "properties": {
+        "levels": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["debug", "info", "warn", "error"]
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "maxBatchSize": { "type": "number" }
+  },
+  "required": ["prompts"],
+  "additionalProperties": false
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/schemas/initializeResult.schema.json",
+  "type": "object",
+  "required": ["protocolVersion", "capabilities", "serverInfo"],
+  "properties": {
+    "protocolVersion": { "type": "string" },
+    "capabilities": {
+      "$ref": "http://example.com/schemas/serverCapabilities.schema.json"
+    },
+    "serverInfo": {
+      "$ref": "http://example.com/schemas/implementation.schema.json"
+    },
+    "instructions": { "type": "string" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,24 @@
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {
+      "experimental": {
+        "betaFeature": true
+      },
+      "supportedProtocolVersions": ["2024-11-05"],
+      "prompts": {
+        "listChanged": true
+      },
+      "resources": {
+        "subscribe": true,
+        "listChanged": true
+      }
+    },
+    "serverInfo": {
+      "name": "test-server",
+      "version": "1.0.0"
+    }
+  }
+} 

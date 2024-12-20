@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/schemas/tools.call.schema.json",
+  "type": "object",
+  "required": ["jsonrpc", "id", "method", "params"],
+  "properties": {
+    "jsonrpc": { "const": "2.0" },
+    "id": { "type": ["string", "number"] },
+    "method": { "const": "tools/call" },
+    "params": {
+      "type": "object",
+      "required": ["toolName", "arguments"],
+      "properties": {
+        "toolName": { "type": "string" },
+        "arguments": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "tool_use_id": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/schemas/implementation.schema.json",
+  "type": "object",
+  "required": ["name", "version"],
+  "properties": {
+    "name": { "type": "string" },
+    "version": { "type": "string" },
+    "publisher": { "type": "string" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/schemas/initialize.schema.json",
+  "type": "object",
+  "required": ["jsonrpc", "id", "method", "params"],
+  "properties": {
+    "jsonrpc": { "const": "2.0" },
+    "id": { "type": ["string","number"] },
+    "method": { "const": "initialize" },
+    "params": {
+      "type": "object",
+      "required": ["protocolVersion", "capabilities", "clientInfo"],
+      "properties": {
+        "protocolVersion": { "type": "string" },
+        "capabilities": {
+          "$ref": "http://example.com/schemas/clientCapabilities.schema.json"
+        },
+        "clientInfo": {
+          "$ref": "http://example.com/schemas/implementation.schema.json"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

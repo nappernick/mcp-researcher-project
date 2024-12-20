@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/schemas/initializeResponse.schema.json",
+  "type": "object",
+  "required": ["jsonrpc", "id", "result"],
+  "properties": {
+    "jsonrpc": { "const": "2.0" },
+    "id": { "type": ["string","number"] },
+    "result": {
+      "$ref": "http://example.com/schemas/initializeResult.schema.json"
+    }
+  },
+  "additionalProperties": false
+}

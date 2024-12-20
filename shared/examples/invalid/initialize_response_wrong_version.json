@@ -1,0 +1,12 @@
+{
+  "jsonrpc": "3.0",
+  "id": 1,
+  "result": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {},
+    "serverInfo": {
+      "name": "test-server",
+      "version": "1.0.0"
+    }
+  }
+} 

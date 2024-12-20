@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/schemas/tool.schema.json",
+  "type": "object",
+  "required": ["name", "description", "parameters"],
+  "properties": {
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

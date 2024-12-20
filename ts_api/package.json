@@ -1,0 +1,40 @@
+{
+  "name": "nlp-moduleocessing",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "node --loader @swc-node/register/esm src/main.ts",
+    "build": "bun build ./src/index.ts --target node --outdir ./dist --external mongodb --external amqplib --external timers/promises --external tls --external dns --external child_process",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "typescript": "^5.7.2",
+    "@modelcontextprotocol/sdk": "^1.0.3",
+    "@types/bun": "^1.1.14",
+    "@types/jest": "^29.5.14",
+    "ajv": "^8.17.1",
+    "amqplib": "^0.10.5",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.4.7",
+    "mcp-wrapper": "link:mcp-wrapper",
+    "mongodb": "^6.11.0",
+    "neo4j-driver": "^5.27.0",
+    "node-cache": "^5.1.2",
+    "shared": "link:shared",
+    "string-width-cjs": "^5.1.1",
+    "ts-node": "^10.9.2"
+  },
+  "paths": {
+    "shared/*": ["./node_modules/shared/dist/*"],
+    "mcp-wrapper/*": ["./node_modules/mcp-wrapper/*"]
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "devDependencies": {
+    "@swc-node/register": "^1.8.0",
+    "@swc/core": "^1.4.0",
+    "@types/node": "^20.0.0"
+  }
+}
